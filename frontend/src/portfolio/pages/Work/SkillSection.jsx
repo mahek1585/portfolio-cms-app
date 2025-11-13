@@ -121,7 +121,13 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const SkillSection = ({ skillList }) => {
-  const skills = Array.isArray(skillList?.data) ? skillList.data : [];
+  // const skills = Array.isArray(skillList?.data) ? skillList.data : [];
+  const skills = Array.isArray(skillList) ? skillList : [];
+
+   console.log("Skills from API:", skills);
+   console.log("SkillSection received:", skillList);
+   
+
 
   return (
     <section className="py-20 px-6 md:px-24 bg-gradient-to-b from-[#fdfbfb] to-[#f3f4f6]">
@@ -148,12 +154,15 @@ const SkillSection = ({ skillList }) => {
             transition={{ delay: index * 0.1 }}
             className="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center p-6 border border-gray-200"
           >
+            
             <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-5">
               <img
                 src={item.img_url}
                 alt={item.title}
                 className="w-16 h-16 object-contain"
+                
               />
+              
             </div>
             <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
           </motion.div>

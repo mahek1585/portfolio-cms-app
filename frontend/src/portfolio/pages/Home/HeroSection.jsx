@@ -21,7 +21,7 @@ const HeroSection = () => {
         </p>
 
        <h1 className="font-poppins font-extrabold text-[2.5rem] md:text-[5rem] leading-tight tracking-wide bg-gradient-to-r from-fuchsia-500 via-rose-500 to-orange-400 text-transparent bg-clip-text">
-          Hey, I'm Mahek
+          {headline}
       </h1>
 
         <p className="text-base md:text-lg text-gray-600 leading-relaxed">

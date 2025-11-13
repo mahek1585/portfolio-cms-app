@@ -7,6 +7,14 @@ const getProfileData = async (req, res) => {
   } else {
     res.json({ message: "Profile Data Fetched", data: data });
   }
+
+// const response = await supabase.from("profile").select("*");
+// console.log({response});
+// res.json({message : "profile data fetched"});
+
+
+
+
 };
 
 module.exports = {

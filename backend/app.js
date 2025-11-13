@@ -3,16 +3,20 @@ dotenv.config();
 
 const express = require("express");
 const cors = require("cors");
+
 const swaggerUi = require("swagger-ui-express");
- const authRouter = require("./routes/auth.route");
 const swaggerFile = require("./swagger-output.json");
+
 const profileRouter = require("./routes/profile.route");
 const skillRouter = require("./routes/skills.router");
+const workRouter = require("./routes/works.router");
+const queryRouter = require("./routes/query.route");
+const linksRouter = require("./routes/links.route");
+
+//  const authRouter = require("./routes/auth.route");
 //  const clientRouter = require("./routes/clients.route");
 
- const workRouter = require("./routes/works.router");
- const queryRouter = require("./routes/query.route");
-const linksRouter = require("./routes/links.route");
+ 
 
 const app = express();
 // middlwares
@@ -32,17 +36,16 @@ app.post("/echo", (req, res) => {
 
 
 // Routes
- app.use("/auth", authRouter);
+//  app.use("/auth", authRouter);
+//  app.use("/clients", clientRouter);
 
 app.use("/profile", profileRouter);
 app.use("/skills", skillRouter);
+app.use("/works", workRouter);
+app.use("/queries", queryRouter);
+app.use("/links", linksRouter);
 
- app.use("/works", workRouter);
-//  app.use("/clients", clientRouter);
- app.use("/queries", queryRouter);
- app.use("/links", linksRouter);
-
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`app is running on PORT:${PORT}`);
