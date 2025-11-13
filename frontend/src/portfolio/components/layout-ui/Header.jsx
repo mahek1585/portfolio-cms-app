@@ -151,7 +151,7 @@ const Header = () => {
   return (
     <>
       <ScrollToTop />
-      <header className="w-full sticky top-0 z-50 bg-white shadow-sm">
+      <header className="w-full sticky top-0 z-50 bg-white shadow-sm ">
         <div className="max-w-[1300px] mx-auto flex justify-between items-center py-4 px-6">
           {/* Logo */}
           <img

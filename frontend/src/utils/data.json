@@ -1,9 +1,10 @@
 {
   "home": {
     "hero": {
-      "title": "Web Developer | Programmer ",
-      "headline": "Hey, I'm Mahek",
-      "lead": "A passionate web developer building modern websites with React and JavaScript. This portfolio highlights my latest work!"
+      "title": "Hello, I'm",
+      "headline": "Mahek Shaikh",
+      "lead": "I craft seamless web experiences, turning complex ideas into intuitive applications that work flawlessly behind the scenes and shine on the screen",
+      "img_url" : "https://i-am-mahek.netlify.app/assets/mahek-BtHUFqqH.jpeg"
     }
   }
 }
