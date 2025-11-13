@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Typewriter } from "react-simple-typewriter";
 import data from "../../../utils/data.json";
+import mahek2 from "../../../assets/Images/mahek2.png";
+
 
 const HeroSection = () => {
-  const { title, lead, img_url } = data.home.hero;
+  const { title, lead } = data.home.hero;
   const [hoveredBtn, setHoveredBtn] = useState(null);
 
   return (
@@ -15,7 +17,7 @@ const HeroSection = () => {
         <div className="relative">
           <div className="w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden border-4 border-transparent shadow-[0_0_40px_#0ff,0_0_80px_#f0f] hover:scale-105 transition-transform duration-500">
             <img
-              src={img_url}
+              src={mahek2}
               alt="Mahek Shaikh"
               className="w-full h-full object-cover"
             />
