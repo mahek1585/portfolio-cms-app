@@ -72,7 +72,7 @@ const HeroSection = () => {
             className={`px-6 py-3 rounded-md cursor-pointer transition-transform font-medium text-center shadow-lg ${
               hoveredBtn === "work"
                 ? "bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 text-white scale-105"
-                : hoveredBtn === "contact"
+                : hoveredBtn === "resume"
                 ? "bg-transparent border-2 border-white text-white"
                 : "bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 text-white"
             }`}
@@ -80,22 +80,23 @@ const HeroSection = () => {
             Work
           </ScrollLink>
 
-          {/* Contact Button */}
-          <ScrollLink
-            to="contact"
-            smooth={true}
+          {/* Resume Button */}
+          <a
+            href="/Mahek Shaikh.pdf" 
+            target="_blank"
             offset={-80}
-            duration={500}
-            onMouseEnter={() => setHoveredBtn("contact")}
+                      duration={500}
+            rel="noopener noreferrer"
+            onMouseEnter={() => setHoveredBtn("resume")}
             onMouseLeave={() => setHoveredBtn(null)}
             className={`px-6 py-3 rounded-md cursor-pointer transition-transform font-medium text-center shadow-md ${
-              hoveredBtn === "contact"
+              hoveredBtn === "resume"
                 ? "bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 text-white scale-105 border-none"
                 : "border-2 border-white text-white bg-transparent"
             }`}
-          >
-            Contact
-          </ScrollLink>
+                    >
+            Resume
+          </a>
         </div>
       </div>
     </section>
