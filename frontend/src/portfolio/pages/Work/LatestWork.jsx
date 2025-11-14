@@ -1,112 +1,52 @@
-// import React from "react";
-
-// const LatestWork = ({ workList }) => {
-//   return (
-//     <section className=" min-h-[455px] px-4">
-//       <h2 className="font-semibold text-[2rem] leading-12 text-center">
-//         What I've Been Building
-//       </h2>
-
-//       <div className="flex flex-col gap-10 pt-[3.8rem] sm:flex-row sm:flex-wrap sm:justify-center lg:justify-between">
-//         {workList.map((item, index) => (
-//           <div key={index} className="w-[19rem] h-[25.4rem] mx-auto">
-//             <img
-//               src={item.img_url}
-//               alt={item.title}
-//               className="h-[315px] mx-auto w-full object-contain rounded-lg bg-slate-100 p-2"
-//             />
-//             <p className="text-[1.3rem] font-semibold pt-6 leading-8 text-center">
-//               {item.title}
-//             </p>
-//             <a
-//               href={item.link}
-//               target="_blank"
-//               className="text-[1.1rem] leading-[1.7rem] pt-2.5 text-center block text-blue-600 no-underline hover:underline"
-//             >
-//               See Project →
-//             </a>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default LatestWork;
-
-
-
-// import React from "react";
-
-// const LatestWork = ({ workList = [] }) => {
-//   return (
-//     <section className=" min-h-[455px] px-4">
-//       <h2 className="font-semibold text-[2rem] leading-12 text-center">
-//         What I've Been Building
-//       </h2>
-
-//       <div className="flex flex-col gap-10 pt-[3.8rem] sm:flex-row sm:flex-wrap sm:justify-center lg:justify-between">
-//         {workList.map((item, index) => (
-//           <div key={index} className="w-[19rem] h-[25.4rem] mx-auto">
-//             <img
-//               src={item.img_url}
-//               alt={item.title}
-//               className="h-[315px] mx-auto w-full object-contain rounded-lg bg-slate-100 p-2"
-//             />
-//             <p className="text-[1.3rem] font-semibold pt-6 leading-8 text-center">
-//               {item.title}
-//             </p>
-//             <a
-//               href={item.link}
-//               target="_blank"
-//               className="text-[1.1rem] leading-[1.7rem] pt-2.5 text-center block text-blue-600 no-underline hover:underline"
-//             >
-//              {item.reponame}
-//             </a>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default LatestWork;
-
-
-
-
-
-
 import React from "react";
 
 const LatestWork = ({ workList = [] }) => {
   return (
-    <section className="py-20 px-6 md:px-24 bg-gradient-to-b from-[#fdfbfb] to-[#f3f4f6]">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2D2D2D] mb-14">
+    <section className="py-20 px-6 md:px-24 bg-[#0f172a]">
+      <h2 className="text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-[#38bdf8] to-[#818cf8] text-transparent bg-clip-text mb-4">
         What I've Been Building
       </h2>
+      <p className="text-center text-[#cbd5e1] mb-14 max-w-2xl mx-auto">
+        Here are some of my recent projects that showcase my skills and passion for development.
+      </p>
 
-      <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {workList.map((item, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-gray-200 p-4 flex flex-col"
+            className="bg-[#1e293b] rounded-2xl shadow-lg hover:shadow-[0_0_30px_rgba(56,189,248,0.3)] transition-all duration-300 border border-[#334155] hover:border-[#38bdf8] p-5 flex flex-col group overflow-hidden"
           >
-            <img
-              src={item.img_url}
-              alt={item.title}
-              className="h-52 w-full object-contain rounded-lg bg-gray-50 mb-6"
-            />
-            <p className="text-xl font-semibold text-center text-[#2D2D2D]">
+            {/* Image Container */}
+            <div className="relative overflow-hidden rounded-lg mb-5 bg-[#0f172a] h-52 flex items-center justify-center">
+              <img
+                src={item.img_url}
+                alt={item.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            {/* Title */}
+            <h3 className="text-xl font-semibold text-white group-hover:text-[#f0f3f5] transition-colors duration-300 mb-3 text-center">
               {item.title}
-            </p>
+            </h3>
+
+            {/* Link */}
             <a
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 text-center text-[#009379] font-medium hover:underline"
+              className="mt-auto text-center text-[#7ed1f5] font-medium hover:text-[#0ea5e9] transition-colors duration-300 flex items-center justify-center gap-2 group/link"
             >
-              {item.reponame || "View Project →"}
+              {item.reponame || "View Project"}
+              <svg 
+                className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </a>
           </div>
         ))}
