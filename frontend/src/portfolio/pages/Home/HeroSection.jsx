@@ -10,7 +10,7 @@ const HeroSection = () => {
   const [hoveredBtn, setHoveredBtn] = useState(null);
 
   return (
-    <section className="py-20 px-6 md:px-24 flex flex-col-reverse md:flex-row items-center justify-between gap-14 bg-gradient-to-br from-[#1e2746] via-[#192541] to-[#173d63] text-white overflow-hidden">
+    <section className="py-20 px-6 md:px-24 flex flex-col-reverse md:flex-row items-center justify-between gap-14 bg-gradient-to-br  from-[#1f3550] via-[#2a4466] to-[#345580] text-white overflow-hidden">
       
       {/* Left Image */}
       <div className="flex justify-center md:justify-start w-full md:w-1/2">
@@ -29,7 +29,7 @@ const HeroSection = () => {
       {/* Right Text */}
       <div className="max-w-xl text-center md:text-left flex flex-col gap-5">
         {/* Title */}
-        <p className="text-cyan-400 text-base md:text-lg font-semibold tracking-wider">
+        <p className="text-cyan-300 text-base md:text-lg font-semibold tracking-wider">
           {title}
         </p>
 

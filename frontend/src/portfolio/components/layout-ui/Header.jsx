@@ -67,7 +67,7 @@ const Header = () => {
         className={`w-full sticky top-0 z-50 transition-all duration-500 ${
           scrolled
             ? "bg-[#1e2746] shadow-lg"
-            : "bg-gradient-to-br from-[#1e2746] via-[#192541] to-[#173d63]"
+            : "bg-gradient-to-br  from-[#1f3550] via-[#2a4466] to-[#345580]"
         }`}
       >
         <div className="max-w-[1300px] mx-auto flex justify-between items-center py-4 px-6">
