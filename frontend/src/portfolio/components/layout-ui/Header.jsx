@@ -45,7 +45,7 @@ const Header = () => {
     return (
       <li
         className="cursor-pointer transition-all duration-300 font-medium text-[1rem] 
-                   px-3 py-2 rounded-md text-white hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-400 hover:to-fuchsia-400 hover:text-white shadow-md"
+                   px-3 py-2 rounded-md text-white hover:text-[#38bdf8] hover:bg-[#1e293b]"
       >
         {name === "About" ? (
           <span onClick={handleClick}>{name}</span>
@@ -64,10 +64,10 @@ const Header = () => {
     <>
       <ScrollToTop />
       <header
-        className={`w-full sticky top-0 z-50 transition-all duration-500 ${
+        className={`w-full fixed top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[#1e2746] shadow-lg"
-            : "bg-gradient-to-br  from-[#1f3550] via-[#2a4466] to-[#345580]"
+            ? "bg-[#0f172a]/95 backdrop-blur-md shadow-lg border-b border-[#334155]"
+            : "bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155]"
         }`}
       >
         <div className="max-w-[1300px] mx-auto flex justify-between items-center py-4 px-6">
@@ -75,7 +75,7 @@ const Header = () => {
           <img
             src={logo}
             alt="Logo"
-            className="h-16 w-16 md:w-16 object-contain rounded-full shadow-lg"
+            className="h-16 w-16 md:w-16 object-contain rounded-full shadow-lg border-2 border-[#38bdf8]/30"
           />
 
           {/* Desktop Nav */}
@@ -86,7 +86,7 @@ const Header = () => {
 
             {/* Resume Link */}
             <li className="cursor-pointer transition-all duration-300 font-medium text-[1rem] 
-                           px-3 py-2 rounded-md text-white hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-400 hover:to-fuchsia-400 hover:text-white shadow-md">
+                           px-4 py-2 rounded-md bg-[#38bdf8] text-[#0f172a] hover:bg-[#0ea5e9] hover:scale-105 shadow-md">
               <a
                 href="/Mahek Shaikh.pdf"
                 target="_blank"
@@ -103,21 +103,21 @@ const Header = () => {
               onClick={showToggler}
               src={Menu}
               alt="Menu"
-              className="h-6 w-6 cursor-pointer"
+              className="h-6 w-6 cursor-pointer filter brightness-0 invert"
             />
           </div>
         </div>
 
         {/* Mobile Menu Overlay */}
         {show && (
-          <div className="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-[#1e2746] via-[#192541] to-[#173d63] flex flex-col justify-center items-center gap-8 z-50 text-xl">
+          <div className="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155] flex flex-col justify-center items-center gap-8 z-50 text-xl">
             {navlist.map(({ id, name, link }) => (
               <li
                 key={id}
-                className="cursor-pointer transition-all duration-300 font-medium text-[1.2rem] px-4 py-3 rounded-md text-white hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-400 hover:to-fuchsia-400 hover:text-white shadow-md"
+                className="cursor-pointer transition-all duration-300 font-medium text-[1.2rem] px-4 py-3 rounded-md text-white hover:text-[#38bdf8] hover:bg-[#1e293b]"
               >
                 {name === "About" ? (
-                  <span onClick={() => navigate("/about")}>{name}</span>
+                  <span onClick={() => { navigate("/about"); showToggler(); }}>{name}</span>
                 ) : location.pathname === "/" ? (
                   <ScrollLink
                     to={link}
@@ -130,7 +130,7 @@ const Header = () => {
                     {name}
                   </ScrollLink>
                 ) : (
-                  <span onClick={() => navigate("/", { state: { scrollTo: link } })}>
+                  <span onClick={() => { navigate("/", { state: { scrollTo: link } }); showToggler(); }}>
                     {name}
                   </span>
                 )}
@@ -138,9 +138,9 @@ const Header = () => {
             ))}
 
             {/* Resume Link */}
-            <li className="cursor-pointer transition-all duration-300 font-medium text-[1.2rem] px-4 py-3 rounded-md text-white hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-400 hover:to-fuchsia-400 hover:text-white shadow-md">
+            <li className="cursor-pointer transition-all duration-300 font-medium text-[1.2rem] px-6 py-3 rounded-md bg-[#38bdf8] text-[#0f172a] hover:bg-[#0ea5e9] shadow-md">
               <a
-                href="/Mahek_Shaikh_Resume.pdf"
+                href="/Mahek Shaikh.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={showToggler}
@@ -152,7 +152,7 @@ const Header = () => {
             {/* Close Button */}
             <button
               onClick={showToggler}
-              className="mt-4 px-6 py-2 border border-cyan-400 text-white hover:bg-gradient-to-r hover:from-cyan-400 hover:via-blue-400 hover:to-fuchsia-400 hover:text-white transition rounded-md shadow-md"
+              className="mt-4 px-6 py-2 border-2 border-[#38bdf8] text-[#38bdf8] hover:bg-[#38bdf8] hover:text-[#0f172a] transition rounded-md"
             >
               Close
             </button>
