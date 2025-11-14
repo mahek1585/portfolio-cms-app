@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 
 const Body = () => {
@@ -60,6 +61,29 @@ const Body = () => {
           </div>
         </div>
 
+        {/* Journey Card */}
+        <div className="bg-gradient-to-br from-[#5d5fdd] to-[#656dbd] rounded-2xl p-8 md:p-10 mb-12 shadow-lg">
+          <div className="flex items-start gap-4 mb-4">
+            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0 text-2xl">
+              🚀
+            </div>
+            <div className="flex-1">
+              <h4 className="text-xl md:text-2xl font-bold text-white mb-2">Want to know more about my journey?</h4>
+              <p className="text-white/90 text-base leading-7 mb-6">
+                Explore my complete timeline — from education to projects, internships to milestones. See how I evolved as a developer!
+              </p>
+              <button
+                onClick={() => {
+                  window.location.href = '/journey';
+                }}
+                className="px-6 py-3 bg-white text-[#6366f1] font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-md hover:cursor-pointer"
+              >
+                View My Journey →
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* Call to Action */}
         <div className="bg-[#0f172a] rounded-2xl p-8 md:p-10 border-2 border-[#38bdf8] shadow-[0_0_30px_rgba(56,189,248,0.2)]">
           <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
@@ -70,7 +94,7 @@ const Body = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <button
+            <button
               onClick={() => {
                 const contactSection = document.getElementById('contact');
                 if (contactSection) {
