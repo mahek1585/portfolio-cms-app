@@ -12,6 +12,7 @@ const skillRouter = require("./routes/skills.router");
 const workRouter = require("./routes/works.router");
 const queryRouter = require("./routes/query.route");
 const linksRouter = require("./routes/links.route");
+const journeyRouter = require("./routes/journey.route");
 
 //  const authRouter = require("./routes/auth.route");
 //  const clientRouter = require("./routes/clients.route");
@@ -44,6 +45,7 @@ app.use("/skills", skillRouter);
 app.use("/works", workRouter);
 app.use("/queries", queryRouter);
 app.use("/links", linksRouter);
+app.use("/journey",journeyRouter);
 
 const PORT = process.env.PORT || 5000;
 
