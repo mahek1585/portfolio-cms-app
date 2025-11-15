@@ -16,3 +16,4 @@ export const worksUrl = baseUrl + "works";
 export const queriesUrl = baseUrl + "queries";
 export const profileUrl = baseUrl + "profile";
 export const linksUrl = baseUrl + "links";
+export const journeyUrl = baseUrl + "journey/timeline"; 

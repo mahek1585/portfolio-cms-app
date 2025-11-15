@@ -2,7 +2,7 @@ import React from 'react';
 
 const JourneyHero = () => {
   return (
-    <div className="text-center mb-16 pt-50">
+    <div className="text-center mb-16 pt-40">
       <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-[#38bdf8] to-white bg-clip-text text-transparent mb-4">
         My Journey
       </h1>
