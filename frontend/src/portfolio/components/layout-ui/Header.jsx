@@ -7,9 +7,11 @@ import logo from "../../../assets/Images/mahek1.png";
 
 const Header = () => {
   const [navlist] = useState([
-    { id: 1, name: "About", link: "about" },
-    { id: 2, name: "Work", link: "work" },
-    { id: 3, name: "Contact", link: "contact" },
+   { id: 1, name: "Home", link: "home" },
+    { id: 2, name: "About", link: "about" },
+    { id: 3, name: "Journey", link: "journey" },
+    { id: 4, name: "Work", link: "work" },
+    { id: 5, name: "Contact", link: "contact" },
   ]);
   const [show, setShow] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -31,35 +33,47 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const NavItem = ({ name, link }) => {
-    const handleClick = () => {
-      if (name === "About") {
-        navigate("/about");
-      } else {
-        if (location.pathname !== "/") {
-          navigate("/", { state: { scrollTo: link } });
-        }
+ const NavItem = ({ name, link }) => {
+  const handleClick = () => {
+    if (name === "About") {
+      navigate("/about");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (name === "Journey") {  
+      navigate("/journey");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (name === "Home") {
+      navigate("/");
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    } else {
+      if (location.pathname !== "/") {
+        navigate("/", { state: { scrollTo: link } });
       }
-    };
-
-    return (
-      <li
-        className="cursor-pointer transition-all duration-300 font-medium text-[1rem] 
-                   px-3 py-2 rounded-md text-white hover:text-[#38bdf8] hover:bg-[#1e293b]"
-      >
-        {name === "About" ? (
-          <span onClick={handleClick}>{name}</span>
-        ) : location.pathname === "/" ? (
-          <ScrollLink to={link} spy={true} smooth={true} offset={-80} duration={500}>
-            {name}
-          </ScrollLink>
-        ) : (
-          <span onClick={handleClick}>{name}</span>
-        )}
-      </li>
-    );
+    }
   };
 
+  return (
+    <li
+      className="cursor-pointer transition-all duration-300 font-medium text-[1rem] 
+                 px-3 py-2 rounded-md text-white hover:text-[#38bdf8] hover:bg-[#1e293b]"
+    >
+      {name === "About" ? (
+        <span onClick={handleClick}>{name}</span>
+      ) : name === "Journey" ? (
+        <span onClick={handleClick}>{name}</span>
+      ) : name === "Home" ? (
+        <span onClick={handleClick}>{name}</span>
+      ) : location.pathname === "/" ? (
+        <ScrollLink to={link} spy={true} smooth={true} offset={-80} duration={500}>
+          {name}
+        </ScrollLink>
+      ) : (
+        <span onClick={handleClick}>{name}</span>
+      )}
+    </li>
+  );
+};
   return (
     <>
       <ScrollToTop />
@@ -118,6 +132,8 @@ const Header = () => {
               >
                 {name === "About" ? (
                   <span onClick={() => { navigate("/about"); showToggler(); }}>{name}</span>
+                ) : name === "Journey" ? (
+                  <span onClick={() => { navigate("/journey"); showToggler(); }}>{name}</span>
                 ) : location.pathname === "/" ? (
                   <ScrollLink
                     to={link}

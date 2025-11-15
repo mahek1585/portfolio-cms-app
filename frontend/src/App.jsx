@@ -7,6 +7,8 @@ import Work from "./portfolio/pages/Work/Work";
 import Contact from "./portfolio/pages/Contact/Contact";
 
 import { ToastContainer } from "react-toastify";
+import Journey from "./portfolio/pages/Journey/Journey";
+
 const App = () => {
   // todo: Add Not Found Page
   const router = createBrowserRouter([
@@ -17,6 +19,10 @@ const App = () => {
     {
       path: "/About",
       element: <About />,
+    },
+    {
+      path: "/Journey",
+      element: <Journey />,
     },
     {
       path: "/Work",
