@@ -20,7 +20,7 @@ const journeyRouter = require("./routes/journey.route");
  
 
 const app = express();
-// middlwares
+// middlwares, 
 app.use(express.json());
 app.use(cors({ origin: "*" }));
 // Swagger UI route
@@ -46,6 +46,7 @@ app.use("/works", workRouter);
 app.use("/queries", queryRouter);
 app.use("/links", linksRouter);
 app.use("/journey",journeyRouter);
+
 
 const PORT = process.env.PORT || 5000;
 
