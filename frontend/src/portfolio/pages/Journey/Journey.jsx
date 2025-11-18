@@ -3,6 +3,7 @@ import Header from '../../components/layout-ui/Header'
 import JourneyHero from './JourneyHero'
 import Timeline from './Timeline'
 import JourneyStats from './JourneyStats'
+import JourneySkills from './JourneySkills'
 
 const Journey = () => {
   return (
@@ -11,6 +12,7 @@ const Journey = () => {
         <JourneyHero />
          <Timeline />
          <JourneyStats />
+         <JourneySkills />
         
     </div>
   )
