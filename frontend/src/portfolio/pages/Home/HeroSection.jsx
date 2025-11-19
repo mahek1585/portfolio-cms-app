@@ -43,7 +43,7 @@ const HeroSection = () => {
           <span className="text-cyan-400">And I'm a</span>
           <span className="text-pink-400">
             <Typewriter
-              words={["Web Developer", "Problem Solver", "Creative Thinker"]}
+              words={["Web Developer", "Problem Solver","Software Developer", "Creative Thinker"]}
               loop={0}
               cursor
               cursorStyle="|"

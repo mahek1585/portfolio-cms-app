@@ -34,7 +34,7 @@ const Home = () => {
     if (isLoading === false) {
       setInterval(() => {
         setSplashLoading(false);
-      }, 2000);
+      }, 5000);
     }
   }, [isLoading]);
   return (
@@ -48,13 +48,13 @@ const Home = () => {
            {/* <Logo skillList={skillList} />  */}
            <SkillSection  skillList={skillList}/> 
 
-          <Element name="work">
+          <Element id="work">
             <LatestWork workList={workList} />
              {/* <Client />  */}
             
           </Element>
 
-          <Element name="contact">
+          <Element id="contact">
             <Footer />
              
           </Element>
