@@ -14,30 +14,28 @@ const queryRouter = require("./routes/query.route");
 const linksRouter = require("./routes/links.route");
 const journeyRouter = require("./routes/journey.route");
 
-//  const authRouter = require("./routes/auth.route");
-//  const clientRouter = require("./routes/clients.route");
-
- 
-
 const app = express();
 
-
-// middlwares, 
+// Middleware
 app.use(express.json());
- app.use(cors({ origin: "*" }));
-app.use(cors({
+
+// ✅ FIX: CORS — Only One Time
+const corsOptions = {
   origin: [
-    "https://i-am-mahek-portfolio.onrender.com",
+    "https://i-am-mahek-shaikh-portfolio.onrender.com", // your frontend
     "http://localhost:5173"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
-}));
-// Swagger UI route
-// app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
+};
+
+app.use(cors(corsOptions));
+
+// Swagger
 app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
-// routes
+
+// Test routes
 app.get("/check-health", (req, res) => {
   res.status(200).json({ message: "Hello World!" });
 });
@@ -46,22 +44,18 @@ app.post("/echo", (req, res) => {
   res.status(200).json({ youSent: req.body });
 });
 
-
 // Routes
-//  app.use("/auth", authRouter);
-//  app.use("/clients", clientRouter);
-
 app.use("/profile", profileRouter);
 app.use("/skills", skillRouter);
 app.use("/works", workRouter);
 app.use("/queries", queryRouter);
 app.use("/links", linksRouter);
-app.use("/journey",journeyRouter);
-
+app.use("/journey", journeyRouter);
 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`app is running on PORT:${PORT}`);
 });
+
 module.exports = app;
