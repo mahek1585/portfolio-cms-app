@@ -4,6 +4,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { useNavigate, useLocation } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 import logo from "../../../assets/Images/mahek1.png";
+import { scroller } from "react-scroll";
 
 const Header = () => {
   const [navlist] = useState([
@@ -32,6 +33,18 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  
+useEffect(() => {
+  if (location.state?.scrollTo) {
+    scroller.scrollTo(location.state.scrollTo, {
+      duration: 600,
+      delay: 0,
+      smooth: "easeInOutQuart",
+      offset: -80
+    });
+  }
+}, [location]);
 
  const NavItem = ({ name, link }) => {
   const handleClick = () => {
