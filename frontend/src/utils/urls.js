@@ -9,7 +9,7 @@
 
 
 
-export const baseUrl = "https://portfolio-cms-app-backend.onrender.com"
+export const baseUrl = "https://portfolio-cms-app-backend.onrender.com/"
   //import.meta.env.VITE_BASE_URL; // http://localhost:8000/
 
 export const skillsUrl = baseUrl + "skills";
