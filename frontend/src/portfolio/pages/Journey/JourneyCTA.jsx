@@ -4,14 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const JourneyCTA = () => {
   const navigate = useNavigate();
 
-  const handleWorkClick = () => {
-    navigate('/', { state: { scrollTo: 'work' } });
-  };
-
-  const handleContactClick = () => {
-    navigate('/', { state: { scrollTo: 'contact' } });
-  };
-
+  
   return (
     <div className="mt-24 mb-12">
       <div className="max-w-4xl mx-auto px-4">
@@ -33,14 +26,29 @@ const JourneyCTA = () => {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
-                onClick={handleWorkClick}
+               onClick={() => navigate('/', { state: { scrollTo: 'work' } })}
                 className="px-8 py-4 bg-[#38bdf8] text-[#0f172a] font-semibold rounded-lg hover:bg-[#0ea5e9] transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-[#38bdf8]/50 min-w-[200px]"
               >
                 View My Projects
               </button>
               
               <button
-                onClick={handleContactClick}
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  const navbarHeight = 80; // Navbar height
+                  const elementPosition = contactSection.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+                  
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
+                } else {
+                  // If contact section not found on current page, go to home
+                  // window.location.href = '/#contact';
+                }
+              }}
                 className="px-8 py-4 border-2 border-[#38bdf8] text-[#38bdf8] font-semibold rounded-lg hover:bg-[#38bdf8] hover:text-[#0f172a] transition-all duration-300 hover:scale-110 min-w-[200px]"
               >
                 Get In Touch

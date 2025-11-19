@@ -5,6 +5,7 @@ import Timeline from './Timeline'
 import JourneyStats from './JourneyStats'
 import JourneySkills from './JourneySkills'
 import JourneyCTA from './JourneyCTA'
+import Footer from '../../components/layout-ui/Footer'
 
 const Journey = () => {
   return (
@@ -15,6 +16,7 @@ const Journey = () => {
          <JourneyStats />
          <JourneySkills />
          <JourneyCTA />
+         <Footer />
         
     </div>
   )
