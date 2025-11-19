@@ -20,9 +20,20 @@ const journeyRouter = require("./routes/journey.route");
  
 
 const app = express();
+
+
 // middlwares, 
 app.use(express.json());
-app.use(cors({ origin: "*" }));
+// app.use(cors({ origin: "*" }));
+app.use(cors({
+  origin: [
+    "https://i-am-mahek-portfolio.onrender.com",
+    "http://localhost:5173"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
 // Swagger UI route
 // app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
