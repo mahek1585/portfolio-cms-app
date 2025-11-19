@@ -24,7 +24,7 @@ const app = express();
 
 // middlwares, 
 app.use(express.json());
-// app.use(cors({ origin: "*" }));
+ app.use(cors({ origin: "*" }));
 app.use(cors({
   origin: [
     "https://i-am-mahek-portfolio.onrender.com",
