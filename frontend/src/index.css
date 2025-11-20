@@ -18,3 +18,16 @@ section {
   /* @apply mb-12; */
   /* @apply min-h-[34rem]; */
 }
+
+@keyframes loading-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-loading-bar {
+  animation: loading-bar 1.5s ease-in-out infinite;
+}
