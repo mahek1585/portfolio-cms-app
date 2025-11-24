@@ -116,7 +116,7 @@ const Body = () => {
               Get In Touch
             </button>
              <a 
-              href="/Mahek Shaikh.pdf" 
+              href="/Mahek_Shaikh.pdf" 
               download="Mahek_Shaikh_Resume.pdf"
               className="px-6 py-3 border-2 border-[#38bdf8] text-[#38bdf8] font-semibold rounded-lg hover:bg-[#38bdf8] hover:text-[#0f172a] transition-all duration-300 text-center"
             >

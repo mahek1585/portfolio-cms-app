@@ -82,7 +82,7 @@ const HeroSection = () => {
 
           {/* Resume Button */}
           <a
-            href="/Mahek Shaikh.pdf" 
+            href="/Mahek_Shaikh.pdf" 
             target="_blank"
             offset={-80}
                       duration={500}

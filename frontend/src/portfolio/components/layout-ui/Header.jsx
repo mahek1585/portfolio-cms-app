@@ -115,7 +115,7 @@ useEffect(() => {
             <li className="cursor-pointer transition-all duration-300 font-medium text-[1rem] 
                            px-4 py-2 rounded-md bg-[#38bdf8] text-[#0f172a] hover:bg-[#0ea5e9] hover:scale-105 shadow-md">
               <a
-                href="/Mahek Shaikh.pdf"
+                href="/Mahek_Shaikh.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
