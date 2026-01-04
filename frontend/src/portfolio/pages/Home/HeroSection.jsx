@@ -10,12 +10,13 @@ const HeroSection = () => {
   const [hoveredBtn, setHoveredBtn] = useState(null);
 
   return (
-    <section className=" mt-15 py-20 px-6 md:px-24 flex flex-col-reverse md:flex-row items-center justify-between gap-14 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155] text-white overflow-hidden">
-      
+  <section className="mt-15 py-16 px-4 sm:px-10 md:px-24 flex flex-col-reverse sm:flex-col md:flex-row items-center justify-between gap-10 sm:gap-8 md:gap-14 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155] text-white overflow-hidden">
+ 
       {/* Left Image */}
       <div className="flex justify-center md:justify-start w-full md:w-1/2">
         <div className="relative">
-          <div className="w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden border-4 border-transparent shadow-[0_0_40px_#0ff,0_0_80px_#f0f] hover:scale-105 transition-transform duration-500">
+          <div className="w-56 sm:w-64 md:w-72 lg:w-80 xl:w-[28rem] h-56 sm:h-64 md:h-72 lg:h-80 xl:h-[28rem] rounded-full overflow-hidden border-4 border-transparent shadow-[0_0_30px_#0ff,0_0_60px_#f0f] hover:scale-105 transition-transform duration-500">
+
             <img
               src={mahek2}
               alt="Mahek Shaikh"
@@ -27,14 +28,16 @@ const HeroSection = () => {
       </div>
 
       {/* Right Text */}
-      <div className="max-w-xl text-center md:text-left flex flex-col gap-5">
+      <div className="max-w-xl w-full sm:w-11/12 md:w-7/12 text-center md:text-left flex flex-col gap-4 sm:gap-3 md:gap-5">
+
         {/* Title */}
         <p className="text-cyan-300 text-base md:text-lg font-semibold tracking-wider">
           {title}
         </p>
 
         {/* Headline */}
-        <h1 className="font-poppins font-extrabold text-[2.5rem] md:text-[4.5rem] leading-tight tracking-wide bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 text-transparent bg-clip-text drop-shadow-lg">
+         <h1 className="font-poppins font-extrabold text-[2rem] sm:text-[2.25rem] md:text-[3.5rem] lg:text-[4.5rem] leading-tight tracking-wide bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 text-transparent bg-clip-text drop-shadow-lg">
+
           {data.home.hero.headline}
         </h1>
 
