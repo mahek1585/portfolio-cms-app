@@ -9,15 +9,16 @@ const Body = () => {
         
         {/* Main Intro */}
         <div className="text-center md:text-left mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-white leading-relaxed mb-6">
-            I'm a passionate full-stack developer with a creative eye and a strong foundation in modern web technologies. 
-            I believe great design and functionality go hand-in-hand to create memorable digital experiences.
+          <h2 className="text-xl md:text-3xl font-semibold text-white leading-relaxed mb-6">
+            I build full-stack web applications with a focus on clean design, solid logic, and real-world usability.
+            I enjoy turning ideas into digital experiences that feel simple, reliable, and purposeful.
+
           </h2>
           
           <div className="inline-block">
-            <span className="text-[#0f172a] bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] px-6 py-3 text-sm font-semibold rounded-full shadow-lg">
+           <span className="text-[#0f172a] bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] px-6 py-3 text-[12px] sm:text-sm font-semibold rounded-full shadow-lg whitespace-nowrap">
               Design with logic. Code with creativity.
-            </span>
+          </span>
           </div>
         </div>
 
