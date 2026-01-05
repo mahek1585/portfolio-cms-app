@@ -44,7 +44,7 @@ const Timeline = () => {
       <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#38bdf8] via-[#38bdf8]/50 to-transparent"></div>
 
       {/* Timeline Items */}
-      <div className="space-y-12">
+      <div className="space-y-14 md:space-y-20">
         {timelineData.map((item) => (
           <TimelineItem key={item.id} data={item} />
         ))}
