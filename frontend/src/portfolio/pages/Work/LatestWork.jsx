@@ -31,23 +31,34 @@ const LatestWork = ({ workList = [] }) => {
               {item.title}
             </h3>
 
-            {/* Link */}
-            <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-auto text-center text-[#7ed1f5] font-medium hover:text-[#0ea5e9] transition-colors duration-300 flex items-center justify-center gap-2 group/link"
-            >
-              {item.reponame || "View Project"}
-              <svg 
-                className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
+            {/* Links */}
+            <div className="mt-auto flex items-center justify-center gap-3 text-sm font-medium">
+
+              {/* GitHub Link */}
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#7ed1f5] hover:text-[#0ea5e9] transition-colors duration-300 flex items-center gap-1 group/link"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
+                {item.reponame || "View Project"}                
+              </a>
+
+              {/* Divider */}
+              {item.live_link && <span className="text-[#64748b]">|</span>}
+
+              {/* Live Demo */}
+              {item.live_link && (
+                <a
+                  href={item.live_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#7ed1f5] hover:text-[#0ea5e9] transition-colors duration-300"
+                >
+                  Live Demo
+                </a>
+              )}
+            </div>          
           </div>
         ))}
       </div>
