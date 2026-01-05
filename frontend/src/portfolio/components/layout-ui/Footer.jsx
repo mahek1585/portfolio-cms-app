@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between gap-16">
         {/* Left Content */}
         <div className="flex-1">
-          <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-[#38bdf8] to-[#818cf8] text-transparent bg-clip-text">
+          <h2 className="text-[26px] md:text-3xl font-bold mb-6 bg-gradient-to-r from-[#38bdf8] to-[#818cf8] text-transparent bg-clip-text">
             Let's work together
           </h2>
           <p className="text-[#cbd5e1] mb-8 leading-relaxed">
