@@ -102,7 +102,18 @@ useEffect(() => {
           <img
             src={logo}
             alt="Logo"
-            className="h-16 w-16 md:w-16 object-contain rounded-full shadow-lg border-2 border-[#38bdf8]/30"
+            className="h-16 w-16 object-contain rounded-full shadow-lg border-2 border-[#38bdf8]/30 cursor-pointer"
+            onClick={() => {
+              if (location.pathname === "/") {
+                scroller.scrollTo("home", {
+                  duration: 600,
+                  smooth: "easeInOutQuart",
+                  offset: -80,
+                });
+              } else {
+                navigate("/", { state: { scrollTo: "home" } });
+              }
+            }}
           />
 
           {/* Desktop Nav */}
