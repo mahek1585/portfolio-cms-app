@@ -15,7 +15,7 @@ const SkillSection = ({ skillList }) => {
         transition={{ duration: 0.6 }}
         className="text-center mb-14"
       >
-        <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#38bdf8] to-[#818cf8] text-transparent bg-clip-text tracking-tight">
+        <h2 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-[#38bdf8] to-[#818cf8] text-transparent bg-clip-text tracking-tight">
           My Technical Skills
         </h2>
         <p className="text-[#cbd5e1] mt-4 max-w-xl mx-auto text-lg">
