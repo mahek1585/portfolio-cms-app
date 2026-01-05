@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const JourneyStats = () => {
   const statsData = [
-    { id: 1, label: "Years Learning", target: 2 },
+    { id: 1, label: "Years Learning", target: 3 },
     { id: 2, label: "Projects Completed", target: 10 },
     { id: 3, label: "Technologies Learned", target: 15 }
   ];
