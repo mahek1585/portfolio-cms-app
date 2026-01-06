@@ -130,8 +130,9 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {show && (
-          <div className="fixed inset-0 bg-[#0f172a] flex flex-col items-center justify-center gap-8 text-xl z-50">
-            {navlist.map(item => (
+          <div className="fixed top-0 left-0 w-full h-screen bg-[#0f172a] flex flex-col items-center justify-center gap-8 text-xl z-[9999]">
+ 
+          {navlist.map(item => (
               <span
                 key={item.id}
                 onClick={() => {
@@ -153,7 +154,9 @@ const Header = () => {
               Resume
             </a>
 
-            <button onClick={toggleMenu} className="border px-6 py-2 rounded-md">
+            <button onClick={toggleMenu} 
+              className="px-6 py-2 rounded-md border-2 border-[#38bdf8] text-[#38bdf8] hover:bg-[#38bdf8] hover:text-[#0f172a] transition-colors duration-300"
+            >
               Close
             </button>
           </div>
