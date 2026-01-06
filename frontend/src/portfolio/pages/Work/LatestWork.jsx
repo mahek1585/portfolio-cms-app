@@ -17,17 +17,17 @@ const LatestWork = ({ workList = [] }) => {
             className="bg-[#1e293b] rounded-2xl shadow-lg hover:shadow-[0_0_30px_rgba(56,189,248,0.3)] transition-all duration-300 border border-[#334155] hover:border-[#38bdf8] p-5 flex flex-col group overflow-hidden"
           >
             {/* Image Container */}
-            <div className="relative overflow-hidden rounded-lg mb-5 bg-[#0f172a] h-52 flex items-center justify-center">
+            <div className="relative overflow-hidden rounded-lg mb-5 bg-[#0f172a] h-40 sm:h-42 md:h-48  flex items-center justify-center">
               <img
                 src={item.img_url}
                 alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover  group-hover:scale-110 transition-transform duration-500 "
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
 
             {/* Title */}
-            <h3 className="text-xl font-semibold text-white group-hover:text-[#f0f3f5] transition-colors duration-300 mb-3 text-center">
+            <h3 className="text-[17px] md:text-xl font-semibold text-white group-hover:text-[#f0f3f5] transition-colors duration-300 mb-3 text-center">
               {item.title}
             </h3>
 
