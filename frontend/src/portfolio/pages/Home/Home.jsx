@@ -14,7 +14,12 @@ import SplashScreen from "../SplashScreen";
 
 const Home = () => {
   const location = useLocation();
+  const { skillList, workList, isLoading } = useHome();
+  useEffect(() => {
+      window.scrollTo(0, 0);
+   }, []);
 
+  const [splashLoading, setSplashLoading] = useState(true);
   useEffect(() => {
     if (location.state?.scrollTo) {
       scroller.scrollTo(location.state.scrollTo, {
@@ -25,10 +30,6 @@ const Home = () => {
       });
     }
   }, [location.state]);
-
-  const { skillList, workList, isLoading } = useHome();
-
-  const [splashLoading, setSplashLoading] = useState(true);
 
   useEffect(() => {
     if (isLoading === false) {
@@ -44,8 +45,11 @@ const Home = () => {
       {splashLoading === false && (
         <>
           <Header />
+          <Element name="home">
           <HeroSection />
-           {/* <Logo skillList={skillList} />  */}
+
+          </Element>
+          
            <SkillSection  skillList={skillList}/> 
 
           <Element id="work">
