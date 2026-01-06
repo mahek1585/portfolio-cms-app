@@ -42,7 +42,7 @@ const HeroSection = () => {
         </h1>
 
         {/* Animated Line */}
-        <p className="text-[1.5rem] md:text-2xl font-semibold flex flex-wrap items-center gap-2">
+        <p className="text-[1.3rem] md:text-2xl font-semibold flex flex-wrap items-center gap-2">
           <span className="text-cyan-400">And I'm a</span>
           <span className="text-pink-400">
             <Typewriter
